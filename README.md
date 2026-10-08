@@ -7,3 +7,10 @@ This repository was created to share as an open-source resource of creating a si
 The `docs` folder contains licenses for the visual assets used for this project, as well as various community resources that has helped to make this project possible.
 
 You can play a live version of the game on [here](https://dusk-in-temper.itch.io/unbearable-tavern).
+
+<img src="https://github.com/duskintemper/Unbearable-Tavern-GPL/blob/main/header.png" width="256">
+
+
+# Screenshots
+<img src="https://github.com/duskintemper/Unbearable-Tavern-GPL/blob/main/screenshot1.png" width="480"> <img src="https://github.com/duskintemper/Unbearable-Tavern-GPL/blob/main/screenshot2.png" width="480"> 
+<img src="https://github.com/duskintemper/Unbearable-Tavern-GPL/blob/main/screenshot3.png" width="480">
