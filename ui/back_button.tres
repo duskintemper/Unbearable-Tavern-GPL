@@ -17,8 +17,6 @@ expand_margin_left = 1.0
 expand_margin_top = 1.0
 expand_margin_right = 1.0
 expand_margin_bottom = 1.0
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
 modulate_color = Color(0.7, 0.58975, 0.385, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_peb26"]
@@ -31,8 +29,6 @@ expand_margin_left = 1.0
 expand_margin_top = 1.0
 expand_margin_right = 1.0
 expand_margin_bottom = 1.0
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
 modulate_color = Color(0.7, 0.58975, 0.385, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q1x5l"]
@@ -45,8 +41,6 @@ expand_margin_left = 1.0
 expand_margin_top = 1.0
 expand_margin_right = 1.0
 expand_margin_bottom = 1.0
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
 modulate_color = Color(0.7, 0.58975, 0.385, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_peb26"]
@@ -63,8 +57,6 @@ expand_margin_left = 1.0
 expand_margin_top = 1.0
 expand_margin_right = 1.0
 expand_margin_bottom = 1.0
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
 modulate_color = Color(0.24705882, 0.15686275, 0.19607843, 1)
 
 [resource]

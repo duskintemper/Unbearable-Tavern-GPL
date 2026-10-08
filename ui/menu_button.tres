@@ -17,8 +17,6 @@ expand_margin_left = 1.0
 expand_margin_top = 1.0
 expand_margin_right = 1.0
 expand_margin_bottom = 1.0
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j68ie"]
 texture = SubResource("AtlasTexture_vtgmo")
@@ -30,8 +28,6 @@ expand_margin_left = 1.0
 expand_margin_top = 1.0
 expand_margin_right = 1.0
 expand_margin_bottom = 1.0
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
 modulate_color = Color(0.91764706, 0.83137256, 0.6666667, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0i2sm"]
@@ -44,8 +40,6 @@ expand_margin_left = 1.0
 expand_margin_top = 1.0
 expand_margin_right = 1.0
 expand_margin_bottom = 1.0
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
 modulate_color = Color(0.24705882, 0.15686275, 0.19607843, 1)
 
 [resource]
