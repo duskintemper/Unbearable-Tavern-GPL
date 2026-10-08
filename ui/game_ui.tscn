@@ -1,0 +1,820 @@
+[gd_scene format=3 uid="uid://d1b3kbbu1jorx"]
+
+[ext_resource type="Script" uid="uid://cysht4ge8pd6g" path="res://ui/game_ui.gd" id="1_xppd6"]
+[ext_resource type="FontFile" uid="uid://c6j4gwmov2qwy" path="res://ui/ThaleahFat.ttf" id="4_3vkek"]
+[ext_resource type="FontFile" uid="uid://dllqfq6ts88cs" path="res://ui/m5x7.ttf" id="5_3vkek"]
+[ext_resource type="Texture2D" uid="uid://bxtsx6g87kvp8" path="res://ui/ui_atlas_1.tres" id="5_xh48a"]
+[ext_resource type="Texture2D" uid="uid://btbkf2ihhve55" path="res://ui/ui_atlas_2.tres" id="6_xh48a"]
+[ext_resource type="Theme" uid="uid://x2ulkwh4v11g" path="res://ui/menu_button.tres" id="7_hgyfx"]
+
+[sub_resource type="Theme" id="Theme_dcmab"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1ndl"]
+bg_color = Color(0.8, 0.40533334, 0.20799999, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 6
+
+[sub_resource type="Theme" id="Theme_w46tp"]
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_b1ndl")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eg7ox"]
+atlas = ExtResource("6_xh48a")
+region = Rect2(48, 104, 16, 8)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vkek"]
+atlas = ExtResource("6_xh48a")
+region = Rect2(0, 104, 16, 8)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyqgc"]
+atlas = ExtResource("6_xh48a")
+region = Rect2(2, 34, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k56px"]
+atlas = ExtResource("6_xh48a")
+region = Rect2(99, 3, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rbdt"]
+atlas = ExtResource("6_xh48a")
+region = Rect2(32, 56, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp5od"]
+atlas = ExtResource("5_xh48a")
+region = Rect2(176, 65, 15, 15)
+
+[sub_resource type="Animation" id="Animation_3vkek"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset_transform_position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.12500209, 0, 0.12500209, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_xh48a"]
+resource_name = "jump"
+length = 0.2500041741173714
+step = 0.041666668
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset_transform_position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 2, 2),
+"points": PackedFloat32Array(0, 0, 0, 0.041666668, 0, -5, -0.041666668, 0, 0.041666668, 0, 0, -0.041666668, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.125, 0.25)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2uxy6"]
+_data = {
+&"RESET": SubResource("Animation_3vkek"),
+&"jump": SubResource("Animation_xh48a")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_530h6"]
+atlas = ExtResource("5_xh48a")
+region = Rect2(113, 128, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hrjk"]
+atlas = ExtResource("6_xh48a")
+region = Rect2(97, 49, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dagrs"]
+atlas = ExtResource("6_xh48a")
+region = Rect2(128, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkdpk"]
+atlas = ExtResource("6_xh48a")
+region = Rect2(64, 64, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2uxy6"]
+atlas = ExtResource("6_xh48a")
+region = Rect2(5, 7, 13, 8)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pylni"]
+atlas = ExtResource("6_xh48a")
+region = Rect2(0, 88, 40, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtgmo"]
+atlas = ExtResource("6_xh48a")
+region = Rect2(48, 104, 16, 8)
+filter_clip = true
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2hidx"]
+load_path = "res://.godot/imported/buttons_1x.png-1bc654b0e466dde0c58f554efdd4b0b6.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7x15y"]
+atlas = SubResource("CompressedTexture2D_2hidx")
+region = Rect2(96, 0, 7, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvh76"]
+atlas = ExtResource("6_xh48a")
+region = Rect2(32, 56, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhuw3"]
+atlas = ExtResource("6_xh48a")
+region = Rect2(128, 64, 16, 16)
+
+[node name="GameUI" type="Control" unique_id=751555693 node_paths=PackedStringArray("scoreboard_rows", "score_labels", "sub_description_labels", "controls_to_hide")]
+process_mode = 3
+z_index = 120
+custom_minimum_size = Vector2(320, 180)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xppd6")
+scoreboard_rows = [NodePath("Scoreboard/ScoreList/Row1"), NodePath("Scoreboard/ScoreList/Row2"), NodePath("Scoreboard/ScoreList/Row3"), NodePath("Scoreboard/ScoreList/Row4"), NodePath("Scoreboard/ScoreList/RowT")]
+score_labels = [NodePath("Scoreboard/ScoreList/Row1/Score1"), NodePath("Scoreboard/ScoreList/Row2/Score2"), NodePath("Scoreboard/ScoreList/Row3/Score3"), NodePath("Scoreboard/ScoreList/Row4/Score4"), NodePath("Scoreboard/ScoreList/RowT/ScoreT")]
+sub_description_labels = [NodePath("Scoreboard/ScoreList/Row1/SubDesc1"), NodePath("Scoreboard/ScoreList/Row2/SubDesc2"), NodePath("Scoreboard/ScoreList/Row3/SubDesc3")]
+controls_to_hide = [NodePath("InfoBoard/TimerVisuals"), NodePath("SatBoard/SatisfactionBar"), NodePath("SatBoard/SatIcon"), NodePath("InfoBoard/GoldVisuals"), NodePath("PauseButton"), NodePath("WarnTextbox")]
+default_theme = SubResource("Theme_dcmab")
+warn_theme = SubResource("Theme_w46tp")
+default_SAT_texture = SubResource("AtlasTexture_eg7ox")
+warn_SAT_texture = SubResource("AtlasTexture_3vkek")
+
+[node name="Scoreboard" type="Control" parent="." unique_id=512843390]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -50.0
+offset_right = 110.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background2" type="ColorRect" parent="Scoreboard" unique_id=1566689376]
+layout_mode = 1
+offset_left = 6.0
+offset_top = -13.0
+offset_right = 82.0
+offset_bottom = 2.0
+color = Color(0.91764706, 0.83137256, 0.6666667, 1)
+
+[node name="Title" type="Label" parent="Scoreboard/Background2" unique_id=2034036560]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_3vkek")
+theme_override_font_sizes/font_size = 16
+text = "Results"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Frame2" type="NinePatchRect" parent="Scoreboard" unique_id=1664402941]
+layout_mode = 1
+offset_top = -18.0
+offset_right = 88.0
+offset_bottom = 8.0
+texture = SubResource("AtlasTexture_yyqgc")
+region_rect = Rect2(0, 0, 20, 20)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Background1" type="NinePatchRect" parent="Scoreboard" unique_id=835405238]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.0
+offset_top = -51.0
+offset_right = 101.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_k56px")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Frame1" type="NinePatchRect" parent="Scoreboard" unique_id=1277442667]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_8rbdt")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="ScoreList" type="VBoxContainer" parent="Scoreboard" unique_id=1656620656]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -50.0
+offset_right = 90.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="Row1" type="HBoxContainer" parent="Scoreboard/ScoreList" unique_id=1441243952]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Scoreboard/ScoreList/Row1" unique_id=1871605871]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Desc1" type="Label" parent="Scoreboard/ScoreList/Row1/MarginContainer" unique_id=1549991092]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_3vkek")
+theme_override_font_sizes/font_size = 16
+text = "Correct Orders"
+vertical_alignment = 1
+
+[node name="SubDesc1" type="Label" parent="Scoreboard/ScoreList/Row1" unique_id=574207311]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_3vkek")
+theme_override_font_sizes/font_size = 16
+text = "(x10)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Score1" type="Label" parent="Scoreboard/ScoreList/Row1" unique_id=551603762]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_3vkek")
+theme_override_font_sizes/font_size = 16
+text = "1000 G"
+vertical_alignment = 1
+
+[node name="Row2" type="HBoxContainer" parent="Scoreboard/ScoreList" unique_id=1870205221]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Scoreboard/ScoreList/Row2" unique_id=1706217660]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Desc2" type="Label" parent="Scoreboard/ScoreList/Row2/MarginContainer" unique_id=1042253252]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_3vkek")
+theme_override_font_sizes/font_size = 16
+text = "Consecutive Orders"
+
+[node name="SubDesc2" type="Label" parent="Scoreboard/ScoreList/Row2" unique_id=609988581]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_3vkek")
+theme_override_font_sizes/font_size = 16
+text = "(x10)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Score2" type="Label" parent="Scoreboard/ScoreList/Row2" unique_id=843340859]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_3vkek")
+theme_override_font_sizes/font_size = 16
+text = "1000 G"
+vertical_alignment = 1
+
+[node name="Row3" type="HBoxContainer" parent="Scoreboard/ScoreList" unique_id=1558075564]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Scoreboard/ScoreList/Row3" unique_id=845034744]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Desc3" type="Label" parent="Scoreboard/ScoreList/Row3/MarginContainer" unique_id=1641041034]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_3vkek")
+theme_override_font_sizes/font_size = 16
+text = "Satisfaction Rating"
+
+[node name="SubDesc3" type="Label" parent="Scoreboard/ScoreList/Row3" unique_id=725213347]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_3vkek")
+theme_override_font_sizes/font_size = 16
+text = "(20%)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Score3" type="Label" parent="Scoreboard/ScoreList/Row3" unique_id=173664288]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_3vkek")
+theme_override_font_sizes/font_size = 16
+text = "1000 G"
+vertical_alignment = 1
+
+[node name="Row4" type="HBoxContainer" parent="Scoreboard/ScoreList" unique_id=400509196]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Scoreboard/ScoreList/Row4" unique_id=47543753]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Desc4" type="Label" parent="Scoreboard/ScoreList/Row4/MarginContainer" unique_id=1401900782]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_3vkek")
+theme_override_font_sizes/font_size = 16
+text = "Perfect Shift"
+
+[node name="Score4" type="Label" parent="Scoreboard/ScoreList/Row4" unique_id=2144415196]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_3vkek")
+theme_override_font_sizes/font_size = 16
+text = "1000 G"
+vertical_alignment = 1
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Scoreboard/ScoreList" unique_id=1929815571]
+layout_mode = 2
+
+[node name="RowT" type="HBoxContainer" parent="Scoreboard/ScoreList" unique_id=180025021]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Scoreboard/ScoreList/RowT" unique_id=931339993]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="DescT" type="Label" parent="Scoreboard/ScoreList/RowT/MarginContainer" unique_id=1585457462]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("5_3vkek")
+theme_override_font_sizes/font_size = 16
+text = "Total Income"
+vertical_alignment = 1
+
+[node name="ScoreT" type="Label" parent="Scoreboard/ScoreList/RowT" unique_id=250980331]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_3vkek")
+theme_override_font_sizes/font_size = 16
+text = "1000 G"
+vertical_alignment = 1
+
+[node name="InfoBoard" type="VBoxContainer" parent="." unique_id=2042200570]
+layout_mode = 1
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 52.0
+offset_bottom = 38.0
+theme_override_constants/separation = 2
+
+[node name="GoldVisuals" type="Control" parent="InfoBoard" unique_id=501900998]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="BaseScoreText" type="Label" parent="InfoBoard/GoldVisuals" unique_id=912469458]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -8.0
+offset_right = 66.0
+offset_bottom = 8.0
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_3vkek")
+theme_override_font_sizes/font_size = 16
+text = "10000 G"
+vertical_alignment = 1
+
+[node name="GoldIcon" type="TextureRect" parent="InfoBoard/GoldVisuals" unique_id=1757832154]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -7.999998
+offset_right = 16.0
+offset_bottom = 7.999998
+grow_vertical = 2
+offset_transform_enabled = true
+texture = SubResource("AtlasTexture_wp5od")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="InfoBoard/GoldVisuals/GoldIcon" unique_id=1581033005]
+libraries/ = SubResource("AnimationLibrary_2uxy6")
+
+[node name="TimerVisuals" type="Control" parent="InfoBoard" unique_id=602289169]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+metadata/_edit_group_ = true
+
+[node name="TimerText" type="Label" parent="InfoBoard/TimerVisuals" unique_id=559054185]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -8.0
+offset_right = 36.0
+offset_bottom = 8.0
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_3vkek")
+theme_override_font_sizes/font_size = 16
+text = "99"
+vertical_alignment = 1
+
+[node name="TimerIcon" type="TextureRect" parent="InfoBoard/TimerVisuals" unique_id=1880920560]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = -7.0
+offset_right = 15.0
+offset_bottom = 7.0
+grow_vertical = 2
+texture = SubResource("AtlasTexture_530h6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SatBoard" type="HBoxContainer" parent="." unique_id=1775758160]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -67.0
+offset_right = 67.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_constants/separation = 0
+
+[node name="SatIcon" type="Control" parent="SatBoard" unique_id=1557030823]
+z_index = 1
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(4, 0)
+metadata/_edit_group_ = true
+
+[node name="Background" type="TextureRect" parent="SatBoard/SatIcon" unique_id=182923812]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_7hrjk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Frame" type="TextureRect" parent="SatBoard/SatIcon" unique_id=1306956224]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.0
+offset_top = -11.0
+offset_right = 11.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_dagrs")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HearttIcon" type="TextureRect" parent="SatBoard/SatIcon" unique_id=1687294986]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_vkdpk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SatisfactionBar" type="TextureProgressBar" parent="SatBoard" unique_id=402854319]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(130, 12)
+layout_mode = 2
+size_flags_vertical = 4
+nine_patch_stretch = true
+stretch_margin_left = 6
+stretch_margin_right = 6
+texture_under = SubResource("AtlasTexture_2uxy6")
+texture_over = SubResource("AtlasTexture_pylni")
+texture_progress = SubResource("AtlasTexture_vtgmo")
+
+[node name="PauseButton" type="Button" parent="." unique_id=575510121 groups=["ui_buttons"]]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -30.0
+offset_top = 10.0
+offset_right = -14.0
+offset_bottom = 26.0
+grow_horizontal = 0
+mouse_behavior_recursive = 2
+theme = ExtResource("7_hgyfx")
+icon = SubResource("AtlasTexture_7x15y")
+icon_alignment = 1
+expand_icon = true
+
+[node name="PauseMenu" type="Control" parent="." unique_id=2063733471]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -44.0
+offset_right = 60.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="NinePatchRect" parent="PauseMenu" unique_id=1870116200]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -41.0
+offset_right = 56.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_k56px")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Frame" type="NinePatchRect" parent="PauseMenu" unique_id=934593154]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_kvh76")
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu" unique_id=126746668]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -9.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Title" type="Label" parent="PauseMenu/VBoxContainer" unique_id=1848133919]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("4_3vkek")
+theme_override_font_sizes/font_size = 16
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ContinueButton" type="Button" parent="PauseMenu/VBoxContainer" unique_id=1249790433 groups=["ui_buttons"]]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_behavior_recursive = 2
+theme = ExtResource("7_hgyfx")
+theme_override_font_sizes/font_size = 12
+text = " Continue "
+
+[node name="MenuButton" type="Button" parent="PauseMenu/VBoxContainer" unique_id=1112444669 groups=["ui_buttons"]]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_behavior_recursive = 2
+theme = ExtResource("7_hgyfx")
+theme_override_font_sizes/font_size = 12
+text = " Menu "
+
+[node name="FailureTextbox" type="NinePatchRect" parent="." unique_id=1576691493]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_top = -28.0
+offset_right = 90.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 40)
+texture = SubResource("AtlasTexture_bhuw3")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+
+[node name="Label" type="Label" parent="FailureTextbox" unique_id=264962946]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.0
+offset_top = -6.5
+offset_right = 91.0
+offset_bottom = 6.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.039215688)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("5_3vkek")
+theme_override_font_sizes/font_size = 12
+text = "You passed out from exhaustion."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EndMenuButton" type="Button" parent="." unique_id=221300384 groups=["ui_buttons"]]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -25.0
+offset_right = -7.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(50, 0)
+mouse_behavior_recursive = 2
+theme = ExtResource("7_hgyfx")
+theme_override_font_sizes/font_size = 12
+text = " menu "
+
+[node name="WarnTextbox" type="NinePatchRect" parent="." unique_id=2071546917]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_top = -28.0
+offset_right = 90.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 40)
+texture = SubResource("AtlasTexture_bhuw3")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+
+[node name="Label" type="Label" parent="WarnTextbox" unique_id=84855594]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.0
+offset_top = -6.5
+offset_right = 91.0
+offset_bottom = 6.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.039215688)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("5_3vkek")
+theme_override_font_sizes/font_size = 12
+text = "The patrons are getting impatient..."
+horizontal_alignment = 1
+vertical_alignment = 1

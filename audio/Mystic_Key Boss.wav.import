@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bu64c6phbbee6"
+path="res://.godot/imported/Mystic_Key Boss.wav-3587e5e2c2224bd94f2a1635a4e81aed.sample"
+
+[deps]
+
+source_file="res://audio/Mystic_Key Boss.wav"
+dest_files=["res://.godot/imported/Mystic_Key Boss.wav-3587e5e2c2224bd94f2a1635a4e81aed.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

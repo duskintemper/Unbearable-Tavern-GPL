@@ -1,0 +1,195 @@
+[
+	{
+		"name": "Godot Engine",
+		"source": "https://godotengine.org",
+		"parts": [
+			{
+				"copyright": [
+					"2014-present, Godot Engine contributors",
+					"2007-2014, Juan Linietsky, Ariel Manzur"
+				],
+				"license": "Expat"
+			}
+		]
+	},
+	{
+		"name": "Quick Licenses",
+		"source": "https://github.com/ProgrammerOnCoffee/Quick-Licenses",
+		"parts": [
+			{
+				"copyright": [
+					"2025, ProgrammerOnCoffee"
+				],
+				"license": "Expat"
+			}
+		]
+	},
+	{
+		"name": "EasyTransition for Godot 4",
+		"source": "https://github.com/IUXGames/EasyTransition",
+		"parts": [
+			{
+				"copyright": [
+					"2026, IUX Games"
+				],
+				"license": "Expat"
+			}
+		]
+	},
+	{
+		"name": "Tiny RPG Character Asset Pack 01",
+		"source": "https://zerie.itch.io/tiny-rpg-character-asset-pack",
+		"parts": [
+			{
+				"copyright": [
+					"2026, Zerie"
+				],
+				"license": "Zerie"
+			}
+		]
+	},
+	{
+		"name": "Free - Pixel Art Asset Pack - Topdown Tileset - 16x16 Sprites",
+		"source": "https://anokolisa.itch.io/free-pixel-art-asset-pack-topdown-tileset-rpg-16x16-sprites",
+		"parts": [
+			{
+				"copyright": [
+					"2026, Anokolisa"
+				],
+				"license": "Anokolisa"
+			}
+		]
+	},
+	{
+		"name": "FantasyStuffs - Basic food RPG icon pack 16x16px",
+		"source": "https://cruelus-rex.itch.io/pixel-stuffs-basic-food-and-ingredients",
+		"parts": [
+			{
+				"copyright": [
+					"2023, Cruelus_rex"
+				],
+				"license": "Cruelus_rex"
+			}
+		]
+	},
+	{
+		"name": "Emotes (16x16)",
+		"source": "https://skalding.itch.io/emotes-16x16",
+		"parts": [
+			{
+				"copyright": [
+					"2026, SkaldingDelight"
+				],
+				"license": "CC-BY-4.0"
+			}
+		]
+	},
+	{
+		"name": "Cursor Pack (1.1)",
+		"source": "https://kenney.nl/assets/cursor-pack",
+		"parts": [
+			{
+				"copyright": [
+					"2024, Kenney"
+				],
+				"license": "CC0-1.0"
+			}
+		]
+	},
+	{
+		"name": "Cryo's Mini GUI",
+		"source": "https://paperhatlizard.itch.io/cryos-mini-gui",
+		"parts": [
+			{
+				"copyright": [
+					"2026, PaperHatLizard"
+				],
+				"license": "CC-BY-4.0"
+			}
+		]
+	},
+	{
+		"name": "Justin's 16x16 Icon Pack",
+		"source": "https://zeromatrix.itch.io/rpgiab-icons",
+		"parts": [
+			{
+				"copyright": [
+					"2022, Justin Arnold"
+				],
+				"license": "CC-BY-4.0"
+			}
+		]
+	},
+	{
+		"name": "m5x7 font",
+		"source": "https://managore.itch.io/m5x7",
+		"parts": [
+			{
+				"copyright": [
+					"2022, Daniel Linssen"
+				],
+				"license": "CC0-1.0"
+			}
+		]
+	},
+	{
+		"name": "Peaberry font",
+		"source": "https://emhuo.itch.io/peaberry-pixel-font",
+		"parts": [
+			{
+				"copyright": [
+					"2022, Emily Huo"
+				],
+				"license": "OFL-1.1"
+			}
+		]
+	},
+	{
+		"name": "Thaleah font",
+		"source": "https://tinyworlds.itch.io/free-pixel-font-thaleah",
+		"parts": [
+			{
+				"copyright": [
+					"2026, Rick Hoppmann"
+				],
+				"license": "CC-BY-4.0"
+			}
+		]
+	},
+	{
+		"name": "FREE 16 BIT RPG or ADVENTURE MUSIC PACK",
+		"source": "https://jaden-eubanks.itch.io/1632-bit-adventure-music-pack",
+		"parts": [
+			{
+				"copyright": [
+					"2023, Jaden Eubanks"
+				],
+				"license": "Jaden Eubanks"
+			}
+		]
+	},
+	{
+		"name": "400 Sounds Pack",
+		"source": "https://ci.itch.io/400-sounds-pack",
+		"parts": [
+			{
+				"copyright": [
+					"2025, Chequered Ink"
+				],
+				"license": "Chequered Ink"
+			}
+		]
+	},
+	{
+		"name": "Sound FX Starter Pack Vol. 1",
+		"source": "https://store.godotengine.org/asset/ovani-sound/sound-fx-starter-pack-vol/",
+		"parts": [
+			{
+				"copyright": [
+					"2026, Ovani Sound"
+				],
+				"license": "Ovani Sound"
+			}
+		]
+	}
+]

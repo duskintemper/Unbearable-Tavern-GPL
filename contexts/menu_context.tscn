@@ -1,0 +1,819 @@
+[gd_scene format=3 uid="uid://bj75ygads1lhg"]
+
+[ext_resource type="Script" uid="uid://be62phqxpic8f" path="res://contexts/menu_context.gd" id="1_bvl50"]
+[ext_resource type="PackedScene" uid="uid://coah5prguom4a" path="res://addons/quick_licenses/quick_licenses.tscn" id="2_de8qs"]
+[ext_resource type="PackedScene" uid="uid://bw25c5rsofksq" path="res://visuals/visual_context.tscn" id="2_jm2dg"]
+[ext_resource type="FontFile" uid="uid://c6j4gwmov2qwy" path="res://ui/ThaleahFat.ttf" id="2_u5mng"]
+[ext_resource type="Theme" uid="uid://x2ulkwh4v11g" path="res://ui/menu_button.tres" id="3_hge62"]
+[ext_resource type="Theme" uid="uid://cnodmt736vraw" path="res://ui/back_button.tres" id="4_7n0eg"]
+[ext_resource type="FontFile" uid="uid://dllqfq6ts88cs" path="res://ui/m5x7.ttf" id="5_xw5jl"]
+[ext_resource type="Texture2D" uid="uid://btbkf2ihhve55" path="res://ui/ui_atlas_2.tres" id="6_2pfts"]
+[ext_resource type="Texture2D" uid="uid://deqjdbadq6nvy" path="res://visuals/environment/door_closed.png" id="6_msuli"]
+[ext_resource type="FontFile" uid="uid://v7g8lt3uconc" path="res://ui/PeaberryMono.ttf" id="7_fordc"]
+[ext_resource type="Shader" uid="uid://b3j0sijmolpos" path="res://visuals/interactables/pixel_outline.gdshader" id="8_2neqh"]
+[ext_resource type="Texture2D" uid="uid://bxtsx6g87kvp8" path="res://ui/ui_atlas_1.tres" id="8_fya1g"]
+[ext_resource type="PackedScene" uid="uid://40kxyw58jf0b" path="res://core/player.tscn" id="8_jytwy"]
+[ext_resource type="Texture2D" uid="uid://n5oaebkqegs7" path="res://visuals/interactables/alcohol_rack.png" id="8_y4r8a"]
+[ext_resource type="Texture2D" uid="uid://cfywwjv7w1r5m" path="res://visuals/interactables/meat_grill.png" id="9_w2g62"]
+[ext_resource type="Texture2D" uid="uid://2j5sssktdl1d" path="res://core/Werebear_Idle.png" id="9_yhde1"]
+[ext_resource type="Texture2D" uid="uid://cgj5for8ywp52" path="res://visuals/interactables/arrow.png" id="11_q6nko"]
+[ext_resource type="Texture2D" uid="uid://c76somq2vbcp0" path="res://visuals/interactables/beer.tres" id="12_q6nko"]
+[ext_resource type="Texture2D" uid="uid://ccdpk2xkssncj" path="res://features/Werewolf_Idle.png" id="13_76u0k"]
+[ext_resource type="Texture2D" uid="uid://dmoevels4eew6" path="res://features/speech_bubble_v2.png" id="14_ylpmp"]
+[ext_resource type="Texture2D" uid="uid://dhu7lyl3m7w6f" path="res://ui/ui_atlas_3.tres" id="16_11c1w"]
+[ext_resource type="Texture2D" uid="uid://bmxqh6haamx02" path="res://features/Skeleton Archer_Idle.png" id="17_bwde1"]
+[ext_resource type="Texture2D" uid="uid://dygwdw2d1g2dh" path="res://visuals/interactables/Food_Sprites.png" id="17_kxemh"]
+[ext_resource type="Texture2D" uid="uid://80k1e0disx2p" path="res://features/Orc_Idle.png" id="18_edr87"]
+[ext_resource type="Texture2D" uid="uid://b7f8lk2s0tahr" path="res://ui/cursor_none.png" id="19_edr87"]
+[ext_resource type="AudioStream" uid="uid://va6g1wfm7s2" path="res://audio/Shop.wav" id="25_wivto"]
+[ext_resource type="AudioStream" uid="uid://8evqn3rbuofw" path="res://audio/pop_2.wav" id="26_b1cgv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp5od"]
+atlas = ExtResource("6_2pfts")
+region = Rect2(32, 56, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pfts"]
+atlas = ExtResource("6_2pfts")
+region = Rect2(131, 67, 10, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dagrs"]
+atlas = ExtResource("9_w2g62")
+region = Rect2(0, 17, 80, 35)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_11c1w"]
+shader = ExtResource("8_2neqh")
+shader_parameter/clr = Color(1, 1, 1, 1)
+shader_parameter/type = 2
+shader_parameter/thickness = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k56px"]
+atlas = ExtResource("9_yhde1")
+region = Rect2(0, 0, 22, 24)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w2g62"]
+shader = ExtResource("8_2neqh")
+shader_parameter/clr = Color(1, 1, 1, 1)
+shader_parameter/type = 2
+shader_parameter/thickness = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkdpk"]
+atlas = ExtResource("13_76u0k")
+region = Rect2(42, 38, 28, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wivto"]
+atlas = ExtResource("17_kxemh")
+region = Rect2(0, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1cgv"]
+atlas = ExtResource("17_bwde1")
+region = Rect2(42, 38, 22, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_de8qs"]
+atlas = ExtResource("18_edr87")
+region = Rect2(42, 38, 25, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylpmp"]
+atlas = ExtResource("6_2pfts")
+region = Rect2(97, 49, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fya1g"]
+atlas = ExtResource("6_2pfts")
+region = Rect2(128, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11c1w"]
+atlas = ExtResource("6_2pfts")
+region = Rect2(64, 64, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2g62"]
+atlas = ExtResource("6_2pfts")
+region = Rect2(5, 7, 13, 8)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxemh"]
+atlas = ExtResource("6_2pfts")
+region = Rect2(0, 88, 40, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7oat"]
+atlas = ExtResource("6_2pfts")
+region = Rect2(48, 104, 16, 8)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwde1"]
+atlas = ExtResource("8_fya1g")
+region = Rect2(176, 65, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edr87"]
+atlas = ExtResource("8_fya1g")
+region = Rect2(113, 128, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3ph1"]
+atlas = ExtResource("16_11c1w")
+region = Rect2(89, 2, 6, 6)
+
+[node name="menu_context" type="Node2D" unique_id=1945847031 node_paths=PackedStringArray("player", "player_sprite", "move_destinations", "hiding_interface_list")]
+script = ExtResource("1_bvl50")
+game_scene_path = "uid://v143i6y8j2w1"
+credits_scene = ExtResource("2_de8qs")
+player = NodePath("Player")
+player_sprite = NodePath("Player/AnimatedSprite2D")
+move_destinations = [NodePath("MoveDestinations/MoveDestination0"), NodePath("MoveDestinations/MoveDestination1"), NodePath("MoveDestinations/MoveDestination2"), NodePath("MoveDestinations/MoveDestination3"), NodePath("MoveDestinations/MoveDestination4")]
+hiding_interface_list = [NodePath("MenuUI/Scoreboard"), NodePath("MenuUI/MenuButtons"), NodePath("MenuUI/AuthorSignature")]
+
+[node name="MenuUI" type="Control" parent="." unique_id=1034480324]
+process_mode = 3
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 320.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameTitle" type="Label" parent="MenuUI" unique_id=1606291271]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -99.0
+offset_top = 10.0
+offset_right = 99.0
+offset_bottom = 33.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_u5mng")
+theme_override_font_sizes/font_size = 24
+text = "UNBEARABLE TAVERN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButtons" type="VBoxContainer" parent="MenuUI" unique_id=1334428425]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_right = -10.0
+offset_bottom = 80.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="PlayButton" type="Button" parent="MenuUI/MenuButtons" unique_id=1737194754 groups=["ui_buttons"]]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_hge62")
+theme_override_font_sizes/font_size = 12
+text = "play"
+
+[node name="InfoButton" type="Button" parent="MenuUI/MenuButtons" unique_id=1219902963 groups=["ui_buttons"]]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_hge62")
+theme_override_font_sizes/font_size = 12
+text = "info"
+
+[node name="CreditsButton" type="Button" parent="MenuUI/MenuButtons" unique_id=556395009 groups=["ui_buttons"]]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_hge62")
+theme_override_font_sizes/font_size = 12
+text = "credits"
+
+[node name="ExitButton" type="Button" parent="MenuUI/MenuButtons" unique_id=1110987109 groups=["ui_buttons"]]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme = ExtResource("3_hge62")
+theme_override_font_sizes/font_size = 12
+text = "exit"
+
+[node name="DiffButtons" type="VBoxContainer" parent="MenuUI" unique_id=1942239957]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_right = -10.0
+offset_bottom = 80.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="BackButton" type="Button" parent="MenuUI/DiffButtons" unique_id=313460660 groups=["ui_buttons"]]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_7n0eg")
+theme_override_font_sizes/font_size = 12
+text = "back"
+
+[node name="EasyButton" type="Button" parent="MenuUI/DiffButtons" unique_id=991854058 groups=["ui_buttons"]]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_hge62")
+theme_override_font_sizes/font_size = 12
+text = "easy"
+
+[node name="NormalButton" type="Button" parent="MenuUI/DiffButtons" unique_id=1484272575 groups=["ui_buttons"]]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_hge62")
+theme_override_font_sizes/font_size = 12
+text = "normal"
+
+[node name="HardButton" type="Button" parent="MenuUI/DiffButtons" unique_id=596547197 groups=["ui_buttons"]]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_hge62")
+theme_override_font_sizes/font_size = 12
+text = "hard"
+
+[node name="Scoreboard" type="VBoxContainer" parent="MenuUI" unique_id=1376878418]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Title" type="Label" parent="MenuUI/Scoreboard" unique_id=1963787601]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_xw5jl")
+theme_override_font_sizes/font_size = 12
+text = "Highscore"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HighscoreText" type="Label" parent="MenuUI/Scoreboard" unique_id=617522862]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("5_xw5jl")
+theme_override_font_sizes/font_size = 12
+text = "0 G"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InfoBoard" type="Control" parent="MenuUI" unique_id=193852903]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -84.0
+offset_right = 120.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Frame" type="NinePatchRect" parent="MenuUI/InfoBoard" unique_id=759641366]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_wp5od")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Background" type="NinePatchRect" parent="MenuUI/InfoBoard" unique_id=1825798343]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -76.0
+offset_right = 111.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_2pfts")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUI/InfoBoard" unique_id=1956808561]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = -69.0
+offset_right = 106.0
+offset_bottom = 69.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 2
+
+[node name="Title" type="RichTextLabel" parent="MenuUI/InfoBoard/VBoxContainer" unique_id=1285232314]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = ExtResource("2_u5mng")
+text = "HOW TO PLAY"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Instruction" type="RichTextLabel" parent="MenuUI/InfoBoard/VBoxContainer" unique_id=1651041189]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_fordc")
+theme_override_fonts/mono_font = ExtResource("7_fordc")
+theme_override_font_sizes/normal_font_size = 7
+text = "As a tavern server, serve orders to your customer by clicking on the correct item station before their satisfaction expires!"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 3
+vertical_alignment = 1
+
+[node name="Graphics" type="Control" parent="MenuUI/InfoBoard/VBoxContainer" unique_id=532708250]
+custom_minimum_size = Vector2(106, 60)
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="TextureRect7" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/Graphics" unique_id=1023525292]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 16.5
+offset_right = 63.0
+offset_bottom = 70.5
+texture = SubResource("AtlasTexture_dagrs")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/Graphics" unique_id=196410510]
+material = SubResource("ShaderMaterial_11c1w")
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -9.5
+offset_right = 4.0
+offset_bottom = 33.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("8_y4r8a")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/Graphics" unique_id=2009574580]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = 8.0
+offset_right = -26.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_k56px")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/Graphics" unique_id=566549858]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.0
+offset_top = -13.0
+offset_right = -19.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_q6nko")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/Graphics" unique_id=1736046821]
+material = SubResource("ShaderMaterial_w2g62")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -28.0
+offset_right = -15.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_q6nko")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/Graphics" unique_id=1996524546]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 13.0
+offset_top = 8.0
+offset_right = 43.15399
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_vkdpk")
+stretch_mode = 5
+flip_h = true
+
+[node name="TextureRect6" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/Graphics" unique_id=1101735715]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 19.0
+offset_top = -12.5
+offset_right = 42.0
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_ylpmp")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect7" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/Graphics/TextureRect6" unique_id=1903247231]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.5
+offset_top = -7.5
+offset_right = 7.75
+offset_bottom = 5.75
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_q6nko")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect8" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/Graphics" unique_id=176358938]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -7.5
+offset_right = -73.0
+offset_bottom = -0.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_q6nko")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect9" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/Graphics" unique_id=359954644]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = -22.5
+offset_right = -69.0
+offset_bottom = -7.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_wivto")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect10" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/Graphics" unique_id=536547986]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 43.0
+offset_top = 7.5
+offset_right = 73.15399
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_b1cgv")
+stretch_mode = 5
+flip_h = true
+
+[node name="TextureRect11" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/Graphics" unique_id=1431236689]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 70.0
+offset_top = 7.5
+offset_right = 100.15399
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_de8qs")
+stretch_mode = 5
+flip_h = true
+
+[node name="TextureRect12" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/Graphics" unique_id=209355616]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 38.5
+offset_right = 111.0
+offset_bottom = 52.5
+texture = ExtResource("19_edr87")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MenuUI/InfoBoard/VBoxContainer" unique_id=8153459]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUI/InfoBoard/VBoxContainer/HBoxContainer2" unique_id=1400569880]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = -3
+
+[node name="SatBoard" type="HBoxContainer" parent="MenuUI/InfoBoard/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=608322238]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+
+[node name="SatIcon" type="Control" parent="MenuUI/InfoBoard/VBoxContainer/HBoxContainer2/VBoxContainer/SatBoard" unique_id=10026681]
+z_index = 1
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+offset_transform_enabled = true
+offset_transform_position = Vector2(4, 0)
+metadata/_edit_group_ = true
+
+[node name="Background" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/HBoxContainer2/VBoxContainer/SatBoard/SatIcon" unique_id=643259411]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_ylpmp")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Frame" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/HBoxContainer2/VBoxContainer/SatBoard/SatIcon" unique_id=925303417]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 9.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_fya1g")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HearttIcon" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/HBoxContainer2/VBoxContainer/SatBoard/SatIcon" unique_id=1470129220]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_11c1w")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SatisfactionBar" type="TextureProgressBar" parent="MenuUI/InfoBoard/VBoxContainer/HBoxContainer2/VBoxContainer/SatBoard" unique_id=1546533416]
+custom_minimum_size = Vector2(70, 9)
+layout_mode = 2
+size_flags_vertical = 4
+nine_patch_stretch = true
+stretch_margin_left = 6
+stretch_margin_right = 6
+texture_under = SubResource("AtlasTexture_w2g62")
+texture_over = SubResource("AtlasTexture_kxemh")
+texture_progress = SubResource("AtlasTexture_q7oat")
+
+[node name="Label" type="RichTextLabel" parent="MenuUI/InfoBoard/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1179567188]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_fordc")
+theme_override_font_sizes/normal_font_size = 7
+text = "Satisfaction Meter"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MenuUI/InfoBoard/VBoxContainer/HBoxContainer2" unique_id=1377177266]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="InfoBoard" type="VBoxContainer" parent="MenuUI/InfoBoard/VBoxContainer/HBoxContainer2/VBoxContainer2" unique_id=1021928115]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 2
+
+[node name="GoldVisuals" type="HBoxContainer" parent="MenuUI/InfoBoard/VBoxContainer/HBoxContainer2/VBoxContainer2/InfoBoard" unique_id=369911736]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="GoldIcon" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/HBoxContainer2/VBoxContainer2/InfoBoard/GoldVisuals" unique_id=2143210765]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+size_flags_horizontal = 0
+offset_transform_enabled = true
+texture = SubResource("AtlasTexture_bwde1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MenuUI/InfoBoard/VBoxContainer/HBoxContainer2/VBoxContainer2/InfoBoard/GoldVisuals" unique_id=1169496989]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_fordc")
+theme_override_font_sizes/normal_font_size = 5
+text = "Earn coins when serving order."
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+vertical_alignment = 1
+
+[node name="TimerVisuals" type="HBoxContainer" parent="MenuUI/InfoBoard/VBoxContainer/HBoxContainer2/VBoxContainer2/InfoBoard" unique_id=81035795]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="TimerIcon" type="TextureRect" parent="MenuUI/InfoBoard/VBoxContainer/HBoxContainer2/VBoxContainer2/InfoBoard/TimerVisuals" unique_id=1555688388]
+custom_minimum_size = Vector2(12, 12)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = SubResource("AtlasTexture_edr87")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MenuUI/InfoBoard/VBoxContainer/HBoxContainer2/VBoxContainer2/InfoBoard/TimerVisuals" unique_id=1003034218]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_fordc")
+theme_override_font_sizes/normal_font_size = 5
+text = "When 25s is remaining, customers become more impatient!"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+vertical_alignment = 1
+
+[node name="InfoCollpaseButton" type="Button" parent="MenuUI/InfoBoard" unique_id=479751751 groups=["ui_buttons"]]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -12.0
+offset_right = 2.0
+offset_bottom = 14.0
+grow_horizontal = 0
+theme = ExtResource("3_hge62")
+icon = SubResource("AtlasTexture_y3ph1")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AuthorSignature" type="Label" parent="MenuUI" unique_id=1361593314]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -15.0
+offset_right = 121.0
+offset_bottom = -5.0
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("5_xw5jl")
+theme_override_font_sizes/font_size = 10
+text = "game by duskintemper"
+vertical_alignment = 1
+
+[node name="VisualContext" parent="." unique_id=248454618 instance=ExtResource("2_jm2dg")]
+metadata/_edit_lock_ = true
+
+[node name="Door" type="Sprite2D" parent="." unique_id=641159969]
+position = Vector2(285, 61)
+texture = ExtResource("6_msuli")
+
+[node name="Player" parent="." unique_id=1636376883 instance=ExtResource("8_jytwy")]
+position = Vector2(205, 125)
+
+[node name="AnimatedSprite2D" parent="Player" index="0" unique_id=1378367389]
+animation = &"move"
+
+[node name="MoveDestinations" type="Node2D" parent="." unique_id=250524964]
+
+[node name="MoveDestination0" type="Marker2D" parent="MoveDestinations" unique_id=1032994336]
+position = Vector2(176, 99)
+
+[node name="MoveDestination1" type="Marker2D" parent="MoveDestinations" unique_id=1939712122]
+position = Vector2(134, 126)
+
+[node name="MoveDestination2" type="Marker2D" parent="MoveDestinations" unique_id=1708112993]
+position = Vector2(114, 101)
+
+[node name="MoveDestination3" type="Marker2D" parent="MoveDestinations" unique_id=1216400315]
+position = Vector2(54, 121)
+
+[node name="MoveDestination4" type="Marker2D" parent="MoveDestinations" unique_id=1220428923]
+position = Vector2(32, 105)
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=309905319]
+unique_name_in_owner = true
+process_mode = 3
+stream = ExtResource("25_wivto")
+autoplay = true
+bus = &"music"
+
+[node name="UIButtonPlayer" type="AudioStreamPlayer" parent="." unique_id=252044818]
+unique_name_in_owner = true
+stream = ExtResource("26_b1cgv")
+bus = &"sfx"
+
+[editable path="Player"]

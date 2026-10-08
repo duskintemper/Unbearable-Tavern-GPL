@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://dkk74qff6yjoj"]
+
+[ext_resource type="Script" uid="uid://bt76iy5j3iwl2" path="res://core/core_system.gd" id="1_js8j4"]
+[ext_resource type="Texture2D" uid="uid://c84jo25cd27bg" path="res://visuals/interactables/meat.tres" id="2_8i6mb"]
+[ext_resource type="SpriteFrames" uid="uid://b27hwo6fe2v7e" path="res://features/customer_werewolf.tres" id="2_gtbe3"]
+[ext_resource type="PackedScene" uid="uid://bfbcq0ddbnf6" path="res://core/interactable_point.tscn" id="3_ivece"]
+[ext_resource type="SpriteFrames" uid="uid://bt2g5if55yjrp" path="res://features/customer_armored.tres" id="3_mwxq0"]
+[ext_resource type="Texture2D" uid="uid://gs6nqtaikhjn" path="res://visuals/interactables/potion.tres" id="3_qlyo4"]
+[ext_resource type="PackedScene" uid="uid://d2v78ktkt8odu" path="res://visuals/interactables/station_indicator.tscn" id="4_hfj2h"]
+[ext_resource type="Texture2D" uid="uid://c76somq2vbcp0" path="res://visuals/interactables/beer.tres" id="4_lmpfs"]
+[ext_resource type="SpriteFrames" uid="uid://c3ltr7ygqcumb" path="res://features/customer_skeleton1.tres" id="4_vuslv"]
+[ext_resource type="SpriteFrames" uid="uid://ofv0jfurotqx" path="res://features/customer_skeleton2.tres" id="5_isvdk"]
+[ext_resource type="Texture2D" uid="uid://5k4diiqgmcvx" path="res://visuals/interactables/fruit.tres" id="5_oi2v5"]
+[ext_resource type="Texture2D" uid="uid://t6nh7ty6x6o3" path="res://visuals/interactables/soup.tres" id="6_cylb2"]
+[ext_resource type="SpriteFrames" uid="uid://bslu78xwa2prb" path="res://features/customer_orc1.tres" id="6_lvwyj"]
+[ext_resource type="SpriteFrames" uid="uid://crmxm64ji4ema" path="res://features/customer_orc2.tres" id="7_8i6mb"]
+[ext_resource type="PackedScene" uid="uid://40kxyw58jf0b" path="res://core/player.tscn" id="15_isvdk"]
+[ext_resource type="Texture2D" uid="uid://dmoevels4eew6" path="res://features/speech_bubble_v2.png" id="18_8i6mb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eg7ox"]
+size = Vector2(50, 50)
+
+[node name="CoreSystem" type="Node2D" unique_id=1022005473 node_paths=PackedStringArray("interactable_points", "player", "player_sprite", "speech_bubble", "toss_item_marker", "request_item_marker", "arrival_marker", "receive_marker", "departure_marker", "waiting_markers")]
+y_sort_enabled = true
+script = ExtResource("1_js8j4")
+interactable_points = [NodePath("InteractablePoint"), NodePath("InteractablePoint2"), NodePath("InteractablePoint3"), NodePath("InteractablePoint4"), NodePath("InteractablePoint5")]
+player = NodePath("Player")
+player_sprite = NodePath("Player/AnimatedSprite2D")
+speech_bubble = NodePath("RequestItemPos/SpeechBubble")
+toss_item_marker = NodePath("TossItemPos")
+request_item_marker = NodePath("RequestItemPos")
+arrival_marker = NodePath("CustomerPositions/CPosA")
+receive_marker = NodePath("CustomerPositions/CPosR")
+departure_marker = NodePath("CustomerPositions/CPosD")
+waiting_markers = [NodePath("CustomerPositions/CPos0"), NodePath("CustomerPositions/CPos1"), NodePath("CustomerPositions/CPos2"), NodePath("CustomerPositions/CPos3"), NodePath("CustomerPositions/CPos4")]
+texture_library = Dictionary[int, Texture2D]({
+1: ExtResource("2_8i6mb"),
+2: ExtResource("3_qlyo4"),
+3: ExtResource("4_lmpfs"),
+4: ExtResource("5_oi2v5"),
+5: ExtResource("6_cylb2")
+})
+customer_sprite_frames = Array[SpriteFrames]([ExtResource("2_gtbe3"), ExtResource("3_mwxq0"), ExtResource("4_vuslv"), ExtResource("5_isvdk"), ExtResource("6_lvwyj"), ExtResource("7_8i6mb")])
+
+[node name="InteractablePoint" parent="." unique_id=685883133 node_paths=PackedStringArray("indicator_sprite") instance=ExtResource("3_ivece")]
+position = Vector2(204, 84)
+indicator_sprite = NodePath("StationIndicator")
+item_to_create = 1
+
+[node name="MoveDestination" parent="InteractablePoint" index="1" unique_id=1032994336]
+position = Vector2(-28, 15)
+
+[node name="StationIndicator" parent="InteractablePoint" unique_id=261263761 instance=ExtResource("4_hfj2h")]
+position = Vector2(0, -30)
+texture = ExtResource("2_8i6mb")
+
+[node name="InteractablePoint2" parent="." unique_id=700600514 node_paths=PackedStringArray("indicator_sprite") instance=ExtResource("3_ivece")]
+position = Vector2(145, 145)
+indicator_sprite = NodePath("StationIndicator")
+item_to_create = 2
+
+[node name="MoveDestination" parent="InteractablePoint2" index="1" unique_id=1032994336]
+position = Vector2(-11, -19)
+
+[node name="StationIndicator" parent="InteractablePoint2" unique_id=1468772934 instance=ExtResource("4_hfj2h")]
+position = Vector2(0, -30)
+texture = ExtResource("3_qlyo4")
+
+[node name="InteractablePoint3" parent="." unique_id=1788541018 node_paths=PackedStringArray("indicator_sprite") instance=ExtResource("3_ivece")]
+position = Vector2(137, 81)
+indicator_sprite = NodePath("StationIndicator")
+item_to_create = 3
+
+[node name="CollisionShape2D" parent="InteractablePoint3" index="0" unique_id=1849157746]
+shape = SubResource("RectangleShape2D_eg7ox")
+
+[node name="MoveDestination" parent="InteractablePoint3" index="1" unique_id=1032994336]
+position = Vector2(-23, 20)
+
+[node name="StationIndicator" parent="InteractablePoint3" unique_id=970502016 instance=ExtResource("4_hfj2h")]
+position = Vector2(0, -30)
+texture = ExtResource("4_lmpfs")
+
+[node name="InteractablePoint4" parent="." unique_id=569894178 node_paths=PackedStringArray("indicator_sprite") instance=ExtResource("3_ivece")]
+position = Vector2(71, 144)
+indicator_sprite = NodePath("StationIndicator")
+item_to_create = 4
+
+[node name="MoveDestination" parent="InteractablePoint4" index="1" unique_id=1032994336]
+position = Vector2(-17, -23)
+
+[node name="StationIndicator" parent="InteractablePoint4" unique_id=413547794 instance=ExtResource("4_hfj2h")]
+position = Vector2(0, -30)
+texture = ExtResource("5_oi2v5")
+
+[node name="InteractablePoint5" parent="." unique_id=413013791 node_paths=PackedStringArray("indicator_sprite") instance=ExtResource("3_ivece")]
+position = Vector2(59, 90)
+indicator_sprite = NodePath("StationIndicator")
+item_to_create = 5
+
+[node name="MoveDestination" parent="InteractablePoint5" index="1" unique_id=1032994336]
+position = Vector2(-27, 15)
+
+[node name="StationIndicator" parent="InteractablePoint5" unique_id=1005297106 instance=ExtResource("4_hfj2h")]
+position = Vector2(0, -30)
+texture = ExtResource("6_cylb2")
+
+[node name="Player" parent="." unique_id=1636376883 instance=ExtResource("15_isvdk")]
+position = Vector2(96, 96)
+
+[node name="TossItemPos" type="Marker2D" parent="." unique_id=146937195]
+position = Vector2(190, 144)
+
+[node name="RequestItemPos" type="Marker2D" parent="." unique_id=172555675]
+position = Vector2(215, 125)
+
+[node name="SpeechBubble" type="Sprite2D" parent="RequestItemPos" unique_id=959561858]
+self_modulate = Color(1, 1, 1, 0.8627451)
+z_index = 15
+position = Vector2(0, 18)
+texture = ExtResource("18_8i6mb")
+offset = Vector2(0, -15)
+
+[node name="CustomerPositions" type="Node2D" parent="." unique_id=1370522292]
+
+[node name="CPosA" type="Marker2D" parent="CustomerPositions" unique_id=2032335727]
+position = Vector2(285, 80)
+
+[node name="CPos0" type="Marker2D" parent="CustomerPositions" unique_id=1487386354]
+position = Vector2(215, 155)
+
+[node name="CPos1" type="Marker2D" parent="CustomerPositions" unique_id=730944738]
+position = Vector2(250, 155)
+
+[node name="CPos2" type="Marker2D" parent="CustomerPositions" unique_id=1239848479]
+position = Vector2(285, 155)
+
+[node name="CPos3" type="Marker2D" parent="CustomerPositions" unique_id=1136498605]
+position = Vector2(285, 130)
+
+[node name="CPos4" type="Marker2D" parent="CustomerPositions" unique_id=158985547]
+position = Vector2(285, 105)
+
+[node name="CPosR" type="Marker2D" parent="CustomerPositions" unique_id=1243613961]
+position = Vector2(190, 155)
+
+[node name="CPosD" type="Marker2D" parent="CustomerPositions" unique_id=503629612]
+position = Vector2(-30, 155)
+
+[editable path="InteractablePoint"]
+[editable path="InteractablePoint2"]
+[editable path="InteractablePoint3"]
+[editable path="InteractablePoint4"]
+[editable path="InteractablePoint5"]
+[editable path="Player"]

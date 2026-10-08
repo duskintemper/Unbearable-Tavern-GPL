@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bfbcq0ddbnf6"]
+
+[ext_resource type="Script" uid="uid://bh3ohan4iyuv3" path="res://core/interactable_point.gd" id="1_t4etb"]
+[ext_resource type="Shader" uid="uid://b3j0sijmolpos" path="res://visuals/interactables/pixel_outline.gdshader" id="2_dwror"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dwror"]
+shader = ExtResource("2_dwror")
+shader_parameter/clr = Color(1, 1, 1, 1)
+shader_parameter/type = 2
+shader_parameter/thickness = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfj2h"]
+size = Vector2(60, 40)
+
+[node name="InteractablePoint" type="Area2D" unique_id=685883133 node_paths=PackedStringArray("move_destination")]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_t4etb")
+move_destination = NodePath("MoveDestination")
+outline_material = SubResource("ShaderMaterial_dwror")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1849157746]
+shape = SubResource("RectangleShape2D_hfj2h")
+
+[node name="MoveDestination" type="Marker2D" parent="." unique_id=1032994336]
+position = Vector2(0, 20)

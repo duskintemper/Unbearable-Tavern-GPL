@@ -1,0 +1,189 @@
+[gd_scene format=3 uid="uid://v143i6y8j2w1"]
+
+[ext_resource type="Script" uid="uid://bxoclrqvnbar4" path="res://contexts/game_controller.gd" id="1_evmbs"]
+[ext_resource type="PackedScene" uid="uid://bw25c5rsofksq" path="res://visuals/visual_context.tscn" id="2_bcgxa"]
+[ext_resource type="PackedScene" uid="uid://dkk74qff6yjoj" path="res://core/core_system.tscn" id="2_g4xxw"]
+[ext_resource type="PackedScene" uid="uid://d1b3kbbu1jorx" path="res://ui/game_ui.tscn" id="2_pb1w4"]
+[ext_resource type="Script" uid="uid://dk04bdfogjik6" path="res://features/order_display.gd" id="4_n65ip"]
+[ext_resource type="Texture2D" uid="uid://bhf1h2jqfijdt" path="res://features/default_texture.png" id="5_n65ip"]
+[ext_resource type="Script" uid="uid://ci8g5gn82h3k8" path="res://contexts/score_sys.gd" id="6_fyuwn"]
+[ext_resource type="Script" uid="uid://bmaifyf1pprfx" path="res://features/main_camera.gd" id="8_176jc"]
+[ext_resource type="AudioStream" uid="uid://c0xiag3kfi31o" path="res://audio/Regular Battle.wav" id="9_y4ixg"]
+[ext_resource type="AudioStream" uid="uid://befkxyei8fgxj" path="res://audio/Regular Boss.wav" id="10_0ol5l"]
+[ext_resource type="AudioStream" uid="uid://bu64c6phbbee6" path="res://audio/Mystic_Key Boss.wav" id="11_so58x"]
+[ext_resource type="AudioStream" uid="uid://c1c77333jk8ep" path="res://audio/Win Theme.wav" id="12_0ol5l"]
+[ext_resource type="AudioStream" uid="uid://c0i3p5ibmntah" path="res://audio/blank.wav" id="13_so58x"]
+[ext_resource type="AudioStream" uid="uid://8evqn3rbuofw" path="res://audio/pop_2.wav" id="14_ccrp5"]
+[ext_resource type="AudioStream" uid="uid://cu0x5086ln6nc" path="res://audio/coin_4.wav" id="15_3txp5"]
+[ext_resource type="AudioStream" uid="uid://cnlnjppgev6rb" path="res://audio/hurt.wav" id="16_4e488"]
+[ext_resource type="AudioStream" uid="uid://bvdofq6tex7yd" path="res://audio/lose.wav" id="17_4ohob"]
+[ext_resource type="AudioStream" uid="uid://cnib1lyymjo77" path="res://audio/Error.wav" id="18_qxa4t"]
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_18egp"]
+clip_count = 5
+clip_0/name = &"Easy"
+clip_0/stream = ExtResource("9_y4ixg")
+clip_0/auto_advance = 0
+clip_1/name = &"Normal"
+clip_1/stream = ExtResource("10_0ol5l")
+clip_1/auto_advance = 0
+clip_2/name = &"Hard"
+clip_2/stream = ExtResource("11_so58x")
+clip_2/auto_advance = 0
+clip_3/name = &"Victory"
+clip_3/stream = ExtResource("12_0ol5l")
+clip_3/auto_advance = 0
+clip_4/name = &"Failure"
+clip_4/stream = ExtResource("13_so58x")
+clip_4/auto_advance = 0
+_transitions = {
+Vector2i(-1, 0): {
+"fade_beats": 1.0,
+"fade_mode": 0,
+"from_time": 0,
+"to_time": 1
+},
+Vector2i(-1, 1): {
+"fade_beats": 1.0,
+"fade_mode": 0,
+"from_time": 0,
+"to_time": 1
+},
+Vector2i(-1, 2): {
+"fade_beats": 1.0,
+"fade_mode": 0,
+"from_time": 0,
+"to_time": 1
+},
+Vector2i(-1, 3): {
+"fade_beats": 0.1,
+"fade_mode": 3,
+"from_time": 0,
+"to_time": 1
+},
+Vector2i(-1, 4): {
+"fade_beats": 3.0,
+"fade_mode": 3,
+"from_time": 1,
+"to_time": 1
+}
+}
+
+[node name="GameController" type="Node2D" unique_id=273879201 node_paths=PackedStringArray("second_timer", "core_system", "game_ui", "order_display_sys", "score_sys", "camera_sys", "music_player")]
+process_mode = 1
+script = ExtResource("1_evmbs")
+second_timer = NodePath("SecondTimer")
+core_system = NodePath("CoreSystem")
+game_ui = NodePath("GameUI")
+order_display_sys = NodePath("OrderDisplaySys")
+score_sys = NodePath("ScoreSys")
+camera_sys = NodePath("MainCamera")
+music_player = NodePath("MusicPlayer")
+menu_scene_path = "uid://bj75ygads1lhg"
+game_time = 80
+rush_time = 25
+SAT_refund = 10.0
+rush_SAT_refund = 19.0
+music_playlist = Dictionary[int, AudioStream]({
+0: ExtResource("9_y4ixg"),
+1: ExtResource("10_0ol5l"),
+2: ExtResource("11_so58x")
+})
+
+[node name="VisualContext" parent="." unique_id=248454618 instance=ExtResource("2_bcgxa")]
+
+[node name="CoreSystem" parent="." unique_id=1022005473 instance=ExtResource("2_g4xxw")]
+customer_move_speed = 100.0
+
+[node name="InteractablePoint" parent="CoreSystem" index="0" unique_id=685883133 node_paths=PackedStringArray("station_sprite")]
+station_sprite = NodePath("../../VisualContext/Station1")
+
+[node name="InteractablePoint2" parent="CoreSystem" index="1" unique_id=700600514 node_paths=PackedStringArray("station_sprite")]
+station_sprite = NodePath("../../VisualContext/Station2")
+
+[node name="InteractablePoint3" parent="CoreSystem" index="2" unique_id=1788541018 node_paths=PackedStringArray("station_sprite")]
+station_sprite = NodePath("../../VisualContext/Station3")
+
+[node name="InteractablePoint4" parent="CoreSystem" index="3" unique_id=569894178 node_paths=PackedStringArray("station_sprite")]
+station_sprite = NodePath("../../VisualContext/Station4")
+
+[node name="InteractablePoint5" parent="CoreSystem" index="4" unique_id=413013791 node_paths=PackedStringArray("station_sprite")]
+station_sprite = NodePath("../../VisualContext/Station5")
+
+[node name="GameUI" parent="." unique_id=751555693 instance=ExtResource("2_pb1w4")]
+offset_right = 320.0
+offset_bottom = 180.0
+mouse_filter = 2
+mouse_behavior_recursive = 1
+
+[node name="OrderDisplaySys" type="Node2D" parent="." unique_id=2005107730]
+script = ExtResource("4_n65ip")
+mask_texture = ExtResource("5_n65ip")
+initial_color_fade = Color(0.6, 0.6, 0.6, 1)
+screen_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
+
+[node name="ScoreSys" type="Node2D" parent="." unique_id=1341493702]
+script = ExtResource("6_fyuwn")
+base_order_score = Dictionary[int, int]({
+0: 60,
+1: 80,
+2: 100
+})
+consecutive_bonus = 20
+SAT_rate_bonus = 5
+perfect_bonus = Dictionary[int, int]({
+0: 600,
+1: 800,
+2: 1000
+})
+
+[node name="SecondTimer" type="Timer" parent="." unique_id=1957030625]
+
+[node name="MainCamera" type="Camera2D" parent="." unique_id=901339893]
+position = Vector2(160, 90)
+script = ExtResource("8_176jc")
+randomStrength = 1.25
+shakeFade = 2.5
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=571375438]
+stream = SubResource("AudioStreamInteractive_18egp")
+bus = &"music"
+
+[node name="SFXList" type="Node" parent="." unique_id=919446411]
+
+[node name="UIButtonPlayer" type="AudioStreamPlayer" parent="SFXList" unique_id=2041414334]
+unique_name_in_owner = true
+stream = ExtResource("14_ccrp5")
+bus = &"sfx"
+
+[node name="CoinPlayer" type="AudioStreamPlayer" parent="SFXList" unique_id=34607784]
+unique_name_in_owner = true
+stream = ExtResource("15_3txp5")
+volume_db = -10.0
+bus = &"sfx"
+
+[node name="HurtPlayer" type="AudioStreamPlayer" parent="SFXList" unique_id=1604608619]
+unique_name_in_owner = true
+stream = ExtResource("16_4e488")
+volume_db = -10.0
+bus = &"sfx"
+
+[node name="LosePlayer" type="AudioStreamPlayer" parent="SFXList" unique_id=1887729378]
+unique_name_in_owner = true
+stream = ExtResource("17_4ohob")
+volume_db = -5.0
+bus = &"sfx"
+
+[node name="WarnPlayer" type="AudioStreamPlayer" parent="SFXList" unique_id=900417431]
+unique_name_in_owner = true
+stream = ExtResource("18_qxa4t")
+volume_db = -7.5
+bus = &"sfx"
+
+[editable path="CoreSystem"]
+[editable path="CoreSystem/InteractablePoint"]
+[editable path="CoreSystem/InteractablePoint2"]
+[editable path="CoreSystem/InteractablePoint3"]
+[editable path="CoreSystem/InteractablePoint4"]
+[editable path="CoreSystem/InteractablePoint5"]
+[editable path="CoreSystem/Player"]

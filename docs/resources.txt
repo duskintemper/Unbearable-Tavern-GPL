@@ -1,0 +1,26 @@
+# Community Tutorials and Resources
+
+-> Gwizz
+  -> Godot 4 Github Tutorial (https://youtu.be/5H4A74FIEtg)
+  -> Godot 4 Camera Shake Tutorial (https://youtu.be/LGt-jjVf-ZU)
+
+-> Heartbeast
+  -> Pixel Art Settings in Godot (https://youtu.be/15t2Y0kXd6E)
+
+-> IcyEngine
+  -> Godot2d Sprite Animation (https://youtu.be/-f1bHR0iiEY)
+
+-> Mostly Mad Productions
+  -> 9 Slice UI (https://youtu.be/zaDcY1oaqQs)
+
+-> Chris' Tutorials
+  -> How to Pause the Game - Godot 4 Gdscript Tutorial (https://youtu.be/7VGsavDiAlI)
+
+-> laffcat
+  -> Efficient 2D Pixel Outlines (https://godotshaders.com/shader/efficient-2d-pixel-outlines/)
+
+
+# Godot Forums
+
+-> Arc throwing with Tween Animation
+(https://forum.godotengine.org/t/2d-throw-item-in-the-air-with-rotation-and-land-on-the-exact-position/112784/7)

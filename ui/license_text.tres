@@ -1,0 +1,20 @@
+[gd_resource type="Theme" format=3 uid="uid://dmkkw4mv5n6se"]
+
+[ext_resource type="FontFile" uid="uid://dllqfq6ts88cs" path="res://ui/m5x7.ttf" id="1_aq5q2"]
+
+[resource]
+Button/fonts/font = ExtResource("1_aq5q2")
+LLabel/base_type = &"Label"
+LLabel/font_sizes/font_size = 12
+LLabel/fonts/font = ExtResource("1_aq5q2")
+Label/font_sizes/font_size = 12
+Label/fonts/font = ExtResource("1_aq5q2")
+LinkButton/constants/underline_spacing = 1
+LinkButton/font_sizes/font_size = 12
+LinkButton/fonts/font = ExtResource("1_aq5q2")
+SButton/base_type = &"Button"
+SButton/font_sizes/font_size = 8
+SButton/fonts/font = ExtResource("1_aq5q2")
+SLabel/base_type = &"Label"
+SLabel/font_sizes/font_size = 8
+SLabel/fonts/font = ExtResource("1_aq5q2")
